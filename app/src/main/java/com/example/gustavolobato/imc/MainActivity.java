@@ -2,17 +2,16 @@ package com.example.gustavolobato.imc;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-
     public void btnCalcularOnClick(View v){
-
+        //ao clicar agora ele pede o nome do usuario
+        //não consegui fazer essa funcionalidade pois meu android studio está cheio de broncas
+        //por isso apenas o comentário aqui para ilustrar como se tivesse a função para tal
         TextView lblResultado = (TextView)findViewById(R.id.lblResultado);
         EditText txtPeso = (EditText) findViewById(R.id.txtPeso);
         EditText txtAltura = (EditText) findViewById(R.id.txtAltura);
@@ -34,4 +33,12 @@ public class MainActivity extends AppCompatActivity {
             lblResultado.setText("Peso ok!");
         }
     }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+
 }
